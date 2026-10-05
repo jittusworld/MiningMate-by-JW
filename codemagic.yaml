@@ -1,0 +1,17 @@
+workflows:
+  miningmate-android:
+    name: MiningMate by JW Android APK
+    environment:
+      java: 17
+    scripts:
+      - name: Prepare Android project
+        script: |
+          rm -rf buildsrc
+          mkdir buildsrc
+          unzip -q MiningMate_by_JW_FinalSource_V2_7.zip -d buildsrc
+      - name: Build debug APK
+        script: |
+          cd buildsrc
+          gradle --no-daemon --stacktrace :app:assembleDebug
+    artifacts:
+      - buildsrc/app/build/outputs/apk/debug/app-debug.apk
