@@ -10,7 +10,7 @@ workflows:
         script: |
           rm -rf buildsrc
           mkdir buildsrc
-  unzip -q MiningMate_by_JW_V4_1_LoginSignupBack_Fixed.zip -d buildsrc
+          unzip -q MiningMate_by_JW_V4_1_LoginSignupBack_Fixed.zip -d buildsrc
 
       - name: Build debug APK
         script: |
