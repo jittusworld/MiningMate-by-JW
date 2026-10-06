@@ -8,7 +8,7 @@ workflows:
         script: |
           rm -rf buildsrc
           mkdir buildsrc
-                    unzip -q MiningMate_by_JW_V2_9_PolishedUI_Source.zip -d buildsrc
+        unzip -q MiningMate_by_JW_V4_0_FINAL_SOURCE_FIXED.zip -d buildsrc
       - name: Build debug APK
         script: |
           cd buildsrc
